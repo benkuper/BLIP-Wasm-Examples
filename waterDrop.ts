@@ -1,13 +1,13 @@
 import * as dev from "./arduino";
 
-let position: f32 = 0.0;
 let prevTime: f32 = 0.0;
 let deltaTime: f32 = 0.0;
-const speed: f32 = 1.0;
-const size:f32 = .2;
+const speed: f32 = 2.0;
+const size:f32 = 0.1;
+let position: f32 = -size;
 
 export function init(): void {
-    // dev.setIMUEnabled(true);
+    dev.setIMUEnabled(true);
 
     prevTime = dev.getTime();
 }
@@ -27,12 +27,12 @@ export function update(): void {
         position = -size;
     }
 
-    dev.pointRGB(position, .2, 0, 255, 120);
+    dev.pointRGB(position, size, 0, 120, 255);
 }
 
 export function stop(): void {
     // dev.clearLeds();
-    // dev.setIMUEnabled(false);
+    dev.setIMUEnabled(false);
     dev.fillLeds(0x0);
 
 }

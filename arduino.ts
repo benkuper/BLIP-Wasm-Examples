@@ -8,13 +8,13 @@ export declare function clearLeds(): void;
 export declare function dimLeds(v: f32): void;
 export declare function fillLeds(color: u32): void;
 export declare function fillLedsRGB(r: u32, g: u32, b: u32): void;
-export declare function fillLedsHSV(h: u32, s: u32, v: u32): void;
+export declare function fillLedsHSV(h: f32, s: f32, v: f32): void;
 export declare function setLed(i: u32, color: u32): void;
 export declare function getLed(i: u32): u32;
 export declare function setLedRGB(i: u32, r: u32, g: u32, b: u32): void;
-export declare function setLedHSV(i: u32, h: u32, s: u32, v: u32): void;
+export declare function setLedHSV(i: u32, h: f32, s: f32, v: f32): void;
 export declare function pointRGB(p: f32, rad: f32, r: u32, g: u32, b: u32): void;
-export declare function pointHSV(p: f32, rad: f32, h: u32, s: u32, v: u32): void;
+export declare function pointHSV(p: f32, rad: f32, h: f32, s: f32, v: f32): void;
 export declare function playVariant(v: u32): void;
 
 export declare function getFXSpeed(): f32;
