@@ -1,7 +1,7 @@
 import * as dev from "./arduino";
 
 export function init(): void {
-    // dev.setIMUEnabled(true);
+    dev.setIMUEnabled(true);
 }
 
 export function update(): void {
@@ -9,12 +9,12 @@ export function update(): void {
     let throwState = dev.getThrowState();
 
     //If in the hands
-    if (throwState == 0) {
+    if (throwState != 0 && throwState != 0) {
         dev.fillLedsRGB(0, 0, 0);
         // dev.fillLedsRGB(255, 0, 0);
     }
     else { //if thrown, in any way
-        dev.fillLedsRGB(255, 100, 0);
+        dev.fillLedsRGB(0, 255, 225);
     }
 }
 
