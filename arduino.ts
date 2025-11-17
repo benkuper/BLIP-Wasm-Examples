@@ -3,7 +3,10 @@ export declare function getTime(): f32;
 export declare function delay(ms: u32): void;
 export declare function printFloat(arg: f32): void;
 export declare function printInt(arg: u32): void;
+export declare function printString(ptr: u32, len: u32): void;
+export declare function getPropID(): u32;
 
+export declare function getLedCount(): i32;
 export declare function clearLeds(): void;
 export declare function dimLeds(v: f32): void;
 export declare function fillLeds(color: u32): void;
@@ -44,6 +47,10 @@ export declare function getMicLevel(): f32;
 
 export declare function setBatterySendEnabled(i: u32): void;
 
+export declare function getDistance(s: u32): f32;
+
 export declare function randomInt(min: u32, max: u32): u32;
 export declare function noise(x: f32, y: f32): f32;
 
+export declare function sendEvent(eventId: u32): void;
+export declare function sendParamFeedback(paramId: u32, value: f32): void;
